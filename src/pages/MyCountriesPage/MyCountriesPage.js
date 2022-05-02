@@ -14,16 +14,7 @@ const MyCountriesPageContainer = styled.div`
 const MyCountriesPage = () => {
   return (
     <MyCountriesPageContainer>
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
+      <h1>You have no countries, idiot</h1>
     </MyCountriesPageContainer>
   );
 };

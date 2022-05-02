@@ -37,16 +37,16 @@ const CountryContainer = styled.div`
   }
 `;
 
-const Country = () => {
+const Country = ({ country }) => {
   return (
     <CountryContainer>
-      <img src="/images/canada.jpg" alt="" />
-      <h3>Canada</h3>
-      <h4>Canada</h4>
-      <p>Region: America</p>
-      <p>Capital: Ottawa</p>
-      <p>Population: 38.586.325</p>
-      <p>Language: french</p>
+      <img src={country.img} alt="" />
+      <h3>{country.name}</h3>
+      <h4>{country.nativeName}</h4>
+      <p>Region: {country.region}</p>
+      <p>Capital: {country.capital}</p>
+      <p>Population: {country.population}</p>
+      <p>Language: {country.language}</p>
       <div className="country-buttons">
         <Button text={"+ Info"} />
       </div>
