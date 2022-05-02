@@ -47,7 +47,7 @@ const Country = () => {
       <p>Capital: Ottawa</p>
       <p>Population: 38.586.325</p>
       <p>Language: french</p>
-      <div class="country-buttons">
+      <div className="country-buttons">
         <Button text={"+ Info"} />
       </div>
     </CountryContainer>
