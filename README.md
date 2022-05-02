@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Header`
 
-## Available Scripts
+- Render logo
+- Render 3 pages:
+  - Home: on click it will ser showingPage to "home"
+    if showingPage is "home" it will underline the button;
+  - My countries:
+    on click it will ser showingPage to "myCountries"
+    if showingPage is "myCountries" it will underline the button;
+  - About: on click it will ser showingPage to "about"
+    if showingPage is "about" it will underline the button;
 
-In the project directory, you can run:
+### `Footer`
 
-### `npm start`
+- Render 2 buttons:
+  - 'Previous': with the action -1 to actualPage statvariable
+  - 'Next': with the action +1 to actualPage statvariable
+- Render received actualPage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Button`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Render a recevied text
+- Excecute a received action on click
 
-### `npm test`
+### `IconButton`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Render a recevied icon
+- Excecute on click a received action
 
-### `npm run build`
+### `Country`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Render a received image
+- Render received info from the info provider (name, nativeName, region, capital, population, language)
+- InfoButton
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  -If favouriteCountry === true && showingPage === home - do nothing more
+  -If favouriteCountry === false && showingPage === home - render a + IconButton that change favouriteCountry to true
+  -If favouriteCountry === true && showingPage === "myCountries" - render a "edit" IconButton and a "delete" IconButton
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `InfoCountry`
 
-### `npm run eject`
+- Render a received image
+- Render received info (name, nativeName, region, capital, population, language, currency, location, timezone)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Form`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Render 10 input Components.
+- Render a submit button that will add the country to my countries.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Input`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Render an imput component with a received label
