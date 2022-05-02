@@ -12,9 +12,18 @@ const MyCountriesPageContainer = styled.div`
 `;
 
 const MyCountriesPage = () => {
+  const dummyCountry = {
+    img: "/images/canada.jpg",
+    name: "Canada",
+    nativeName: "Canada",
+    region: "America",
+    capital: "Ottawa",
+    population: "38.586.325",
+    language: "french",
+  };
   return (
     <MyCountriesPageContainer>
-      <h1>You have no countries, idiot</h1>
+      <Country country={dummyCountry} />
     </MyCountriesPageContainer>
   );
 };
