@@ -1,5 +1,7 @@
 # README
 
+## COMPONENTS
+
 ### `Header`
 
 - Render logo
@@ -34,10 +36,9 @@
 - Render a received image
 - Render received info from the info provider (name, nativeName, region, capital, population, language)
 - InfoButton
-
-  -If favouriteCountry === true && showingPage === home - do nothing more
-  -If favouriteCountry === false && showingPage === home - render a + IconButton that change favouriteCountry to true
-  -If favouriteCountry === true && showingPage === "myCountries" - render a "edit" IconButton and a "delete" IconButton
+  -If favouriteCountry === true && showingPage === home / do nothing more
+  -If favouriteCountry === false && showingPage === home / render a + IconButton that change favouriteCountry to true
+  -If favouriteCountry === true && showingPage === "myCountries" / render a "edit" IconButton and a "delete" IconButton
 
 ### `InfoCountry`
 
@@ -52,3 +53,25 @@
 ### `Input`
 
 - Render an imput component with a received label
+
+## DATA LAYER
+
+### `allCountries`
+
+- Array of all countries fetched from the api. They will be ordered alphabetically and the boolean propierty favouriteCountry will be added to each object.
+
+### `myCountries`
+
+- Array of the countries with the favouriteCountry propierty with the value true.
+
+### `countriesToShow`
+
+- Array of 10 countries that will be shown.
+
+### `actualPage`
+
+- Current showing page, it will have values from 1 to 25.
+
+### `showingPage`
+
+- It can take the next values -> home / myCountries / about
