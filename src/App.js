@@ -1,12 +1,13 @@
 import "./App.css";
-
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import IconButton from "./components/IconButton/IconButton";
 
 function App() {
   return (
     <div className="App">
       <Header />
+
       <Footer />
     </div>
   );
