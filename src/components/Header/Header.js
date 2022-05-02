@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
@@ -34,9 +35,15 @@ const Header = () => {
         <h1>AC</h1>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>My countries</li>
-            <li>About</li>
+            <li>
+              <NavLink to="/home">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/countries">My Countries</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
