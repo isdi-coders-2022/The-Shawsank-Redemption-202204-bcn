@@ -15,7 +15,7 @@ describe("Given a Button component", () => {
   });
 
   describe("When it's clicked", () => {
-    test("Then it should call a mock action", () => {
+    test("Then it should call a mock function", () => {
       const mock = jest.fn();
 
       render(<Button action={mock} />);

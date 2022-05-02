@@ -12,18 +12,28 @@ const HomePageContainer = styled.div`
 `;
 
 const HomePage = () => {
+  const dummyCountry = {
+    img: "/images/canada.jpg",
+    name: "Canada",
+    nativeName: "Canada",
+    region: "America",
+    capital: "Ottawa",
+    population: "38.586.325",
+    language: "french",
+  };
+
   return (
     <HomePageContainer>
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
+      <Country country={dummyCountry} />
     </HomePageContainer>
   );
 };
