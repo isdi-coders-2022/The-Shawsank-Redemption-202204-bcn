@@ -11,9 +11,9 @@ describe("Given a Header Component", () => {
         </BrowserRouter>
       );
 
-      const receivedResult = screen.getAllByRole("listitem");
+      const result = screen.getAllByRole("listitem");
 
-      expect(receivedResult.length).toBe(3);
+      expect(result.length).toBe(3);
     });
     test("Then it should render a heading element with 'AC' text inside", () => {
       const expectedText = "AC";
@@ -24,9 +24,9 @@ describe("Given a Header Component", () => {
         </BrowserRouter>
       );
 
-      const receivedText = screen.getByRole("heading").textContent;
+      const result = screen.getByRole("heading").textContent;
 
-      expect(receivedText).toBe(expectedText);
+      expect(result).toBe(expectedText);
     });
   });
 });
