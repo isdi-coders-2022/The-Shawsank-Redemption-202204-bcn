@@ -9,15 +9,6 @@ const MyCountriesPageContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
-
-  div {
-    width: 300px;
-    height: 560px;
-    margin: 10px;
-    background-color: #cad4d8;
-    display: inline-block;
-    border-radius: 5px;
-  }
 `;
 
 const MyCountriesPage = () => {
