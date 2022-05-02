@@ -9,17 +9,16 @@ const ButtonContainer = styled.div`
     font-size: 30px;
     border-radius: 10px;
     border: none;
-    width: 100px;
-    height: 50px;
-    margin: 0 5px;
+    padding: 3px 10px;
+    cursor: pointer;
   }
 `;
 
-const Button = ({ text }) => {
+const Button = ({ text, action }) => {
   return (
     <>
       <ButtonContainer>
-        <button>{text}</button>
+        <button onClick={action}>{text}</button>
       </ButtonContainer>
     </>
   );

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../Button/Button";
 
 const FooterContainer = styled.div`
   background-color: #8399a2;
@@ -8,14 +9,22 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  button {
+    transition: 0.3s;
+  }
+
+  button:hover {
+    color: #dedc8a;
+  }
 `;
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>previous</p>
+      <Button text={"previous"} />
       <p>page</p>
-      <p>next</p>
+      <Button text={"next"} />
     </FooterContainer>
   );
 };
