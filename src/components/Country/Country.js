@@ -33,7 +33,7 @@ const CountryContainer = styled.div`
   .country-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 `;
 
