@@ -9,10 +9,13 @@ const ButtonContainer = styled.div`
     font-size: 30px;
     border-radius: 10px;
     border: none;
+    width: 100px;
+    height: 50px;
+    margin: 0 5px;
   }
 `;
 
-const ButtonComponent = ({ text }) => {
+const Button = ({ text }) => {
   return (
     <>
       <ButtonContainer>
@@ -22,4 +25,4 @@ const ButtonComponent = ({ text }) => {
   );
 };
 
-export default ButtonComponent;
+export default Button;

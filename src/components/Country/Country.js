@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../Button/Button";
 
 const CountryContainer = styled.div`
   color: #8399a2;
@@ -9,9 +10,30 @@ const CountryContainer = styled.div`
   display: inline-block;
   border-radius: 20px;
   box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.51);
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.51);
+  }
   img {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
+  }
+  h3 {
+    margin: 0px 5px;
+    font-size: 48px;
+  }
+  h4 {
+    margin: 0px 6px;
+    font-size: 30px;
+  }
+  p {
+    font-size: 30px;
+    margin: 5px 6px;
+  }
+  .country-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
   }
 `;
 
@@ -25,6 +47,9 @@ const Country = () => {
       <p>Capital: Ottawa</p>
       <p>Population: 38.586.325</p>
       <p>Language: french</p>
+      <div class="country-buttons">
+        <Button text={"+ Info"} />
+      </div>
     </CountryContainer>
   );
 };
