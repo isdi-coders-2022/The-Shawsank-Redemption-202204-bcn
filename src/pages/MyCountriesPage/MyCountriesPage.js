@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Country from "../../components/Country/Country";
 
 const MyCountriesPageContainer = styled.div`
   background-color: #eef2f3;
@@ -19,4 +20,21 @@ const MyCountriesPageContainer = styled.div`
   }
 `;
 
-export default MyCountriesPageContainer;
+const MyCountriesPage = () => {
+  return (
+    <MyCountriesPageContainer>
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+    </MyCountriesPageContainer>
+  );
+};
+
+export default MyCountriesPage;
