@@ -50,6 +50,11 @@
 - Render 10 input Components.
 - Render a submit button that will add the country to my countries.
 
+### `FilterContinent`
+
+- Render a desplegable menu with 6 buttons
+- Modifiy the continentSelected variable
+
 ### `Input`
 
 - Render an imput component with a received label
@@ -75,3 +80,7 @@
 ### `showingPage`
 
 - It can take the next values -> home / myCountries / about
+
+### `continentSelected`
+
+- It can take the next values -> africa / europe / northAmerica / southAmerica / oceania / none
