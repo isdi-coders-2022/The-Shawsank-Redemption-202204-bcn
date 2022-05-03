@@ -22,8 +22,10 @@ const HeaderContainer = styled.div`
     margin: 0px;
     padding: 0px;
 
-    li {
+    a {
       color: white;
+      text-decoration: none;
+      font-size: 1.3em;
     }
   }
 `;
