@@ -20,6 +20,9 @@ const HomePage = () => {
     capital: "Ottawa",
     population: "38.586.325",
     language: "french",
+    currency: "Canadian Dollar",
+    borders: "USA",
+    timezone: "UTC-8",
   };
 
   return (
