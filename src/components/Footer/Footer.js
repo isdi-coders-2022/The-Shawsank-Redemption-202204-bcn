@@ -22,9 +22,9 @@ const FooterContainer = styled.div`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Button text={"previous"} />
+      <Button text={"<"} />
       <p>page</p>
-      <Button text={"next"} />
+      <Button text={">"} />
     </FooterContainer>
   );
 };
