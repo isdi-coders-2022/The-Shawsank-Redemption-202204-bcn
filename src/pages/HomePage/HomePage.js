@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import Country from "../../components/Country/Country";
+import FilterContinent from "../../components/FilterContinent/FilterContinent";
 
 const HomePageContainer = styled.div`
   background-color: #eef2f3;
   color: #ffffff;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
+
+  .country-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 `;
 
 const HomePage = () => {
@@ -24,16 +28,20 @@ const HomePage = () => {
 
   return (
     <HomePageContainer>
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
-      <Country country={dummyCountry} />
+      <FilterContinent />
+
+      <div className="country-cards">
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+        <Country country={dummyCountry} />
+      </div>
     </HomePageContainer>
   );
 };
