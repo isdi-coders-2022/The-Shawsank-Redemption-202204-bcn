@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const IconButtonContainer = styled.div`
   display: inline-block;
@@ -17,6 +18,12 @@ const IconButton = ({ src, alt, action }) => {
       </button>
     </IconButtonContainer>
   );
+};
+
+IconButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  action: PropTypes.string.isRequired,
 };
 
 export default IconButton;

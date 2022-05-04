@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const InfoCountryContainer = styled.div`
   color: #8399a2;
@@ -84,6 +85,10 @@ const InfoCountry = ({ country }) => {
       </div>
     </InfoCountryContainer>
   );
+};
+
+InfoCountry.propTypes = {
+  country: PropTypes.any.isRequired,
 };
 
 export default InfoCountry;
