@@ -1,4 +1,5 @@
-const orderCountriesAlphabetically = (countries) => {
+const orderCountriesAlphabetically = (apiCountries) => {
+  let countries = apiCountries;
   countries.sort((a, b) => {
     let countryA = a.name.common.toUpperCase();
     let countryB = b.name.common.toUpperCase();
