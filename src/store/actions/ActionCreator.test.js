@@ -4,13 +4,18 @@ import {
   loadCountries,
   addCountry,
 } from "./ActionCreator";
-import actionTypes from "./ActionTypes";
+import {
+  addCountryType,
+  decreaseNumberType,
+  increaseNumberType,
+  loadCountriesType,
+} from "./ActionTypes";
 
 describe("Given a increaseNumber function", () => {
   describe("When it's invoked", () => {
     test("Then it should return a certain object", () => {
       const expectedResult = {
-        type: actionTypes.increaseNumber,
+        type: increaseNumberType,
       };
 
       const receivedResult = increaseNumber();
@@ -24,7 +29,7 @@ describe("Given a decreaseNumber function", () => {
   describe("When it's invoked", () => {
     test("Then it should return a certain object", () => {
       const expectedResult = {
-        type: actionTypes.decreaseNumber,
+        type: decreaseNumberType,
       };
 
       const receivedResult = decreaseNumber();
@@ -39,7 +44,7 @@ describe("Given a loadCountries function", () => {
     test("Then it should return a certain object", () => {
       let countries;
       const expectedResult = {
-        type: actionTypes.loadCountries,
+        type: loadCountriesType,
         payload: countries,
       };
 
@@ -55,7 +60,7 @@ describe("Given a addCountry function", () => {
     test("Then it should return a certain object", () => {
       let country;
       const expectedResult = {
-        type: actionTypes.addCountry,
+        type: addCountryType,
         payload: country,
       };
 

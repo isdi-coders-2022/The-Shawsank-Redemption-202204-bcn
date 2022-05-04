@@ -1,19 +1,24 @@
-import actionTypes from "./ActionTypes";
+import {
+  increaseNumberType,
+  decreaseNumberType,
+  loadCountriesType,
+  addCountryType,
+} from "./ActionTypes";
 
 export const increaseNumber = () => ({
-  type: actionTypes.increaseNumber,
+  type: increaseNumberType,
 });
 
 export const decreaseNumber = () => ({
-  type: actionTypes.decreaseNumber,
+  type: decreaseNumberType,
 });
 
 export const loadCountries = (countries) => ({
-  type: actionTypes.loadCountries,
+  type: loadCountriesType,
   payload: countries,
 });
 
 export const addCountry = (country) => ({
-  type: actionTypes.addCountry,
+  type: addCountryType,
   payload: country,
 });

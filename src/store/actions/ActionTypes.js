@@ -1,8 +1,4 @@
-const actionTypes = {
-  increaseNumber: "INCREASE_NUMBER",
-  decreaseNumber: "DECREASE_NUMBER",
-  loadCountries: "LOAD_COUNTRIES",
-  addCountry: "ADD_COUNTRY",
-};
-
-export default actionTypes;
+export const increaseNumberType = "INCREASE_NUMBER";
+export const decreaseNumberType = "DECREASE_NUMBER";
+export const loadCountriesType = "LOAD_COUNTRIES";
+export const addCountryType = "ADD_COUNTRY";
