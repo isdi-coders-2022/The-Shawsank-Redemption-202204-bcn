@@ -1,6 +1,8 @@
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import Country from "../../components/Country/Country";
 import FilterContinent from "../../components/FilterContinent/FilterContinent";
+import Context from "../../store/contexts/CountriesContext";
 
 const HomePageContainer = styled.div`
   background-color: #eef2f3;
@@ -16,34 +18,16 @@ const HomePageContainer = styled.div`
 `;
 
 const HomePage = () => {
-  const dummyCountry = {
-    img: "/images/canada.jpg",
-    name: "Canada",
-    nativeName: "Canada",
-    region: "America",
-    capital: "Ottawa",
-    population: "38.586.325",
-    language: "french",
-    currency: "Canadian Dollar",
-    borders: "USA",
-    timezone: "UTC-8",
-  };
+  const { state } = useContext(Context);
 
   return (
     <HomePageContainer>
       <FilterContinent />
 
       <div className="country-cards">
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
-        <Country country={dummyCountry} />
+        {state.countries.map((country, index) => (
+          <Country key={index} country={country} />
+        ))}
       </div>
     </HomePageContainer>
   );
