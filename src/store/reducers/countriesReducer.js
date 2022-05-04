@@ -1,24 +1,29 @@
-import actionTypes from "../actions/ActionTypes";
+import actionTypes, {
+  addCountryType,
+  decreaseNumberType,
+  increaseNumberType,
+  loadCountriesType,
+} from "../actions/ActionTypes";
 
 const countriesReducer = (state, action) => {
   let newData;
 
   switch (action.type) {
-    case actionTypes.increaseNumber:
+    case increaseNumberType:
       state.page === 25
         ? (newData = { ...state })
         : (newData = { ...state, page: state.page + 1 });
       break;
-    case actionTypes.decreaseNumber:
+    case decreaseNumberType:
       state.page === 0
         ? (newData = { ...state })
         : (newData = { ...state, page: state.page - 1 });
       break;
-    case actionTypes.loadCountries:
+    case loadCountriesType:
       newData = { ...state, countries: action.payload, loaded: true };
       break;
 
-    case actionTypes.addCountry:
+    case addCountryType:
       newData = {
         ...state,
         favouriteCountries: [...state.favouriteCountries, action.payload],
