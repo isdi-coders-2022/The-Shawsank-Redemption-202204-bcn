@@ -27,7 +27,6 @@ const FooterContainer = styled.div`
 
 const Footer = () => {
   const { state, countriesDispatch } = useContext(Context);
-  debugger;
   return (
     <FooterContainer>
       <Button text={"<"} action={() => countriesDispatch(decreaseNumber())} />
