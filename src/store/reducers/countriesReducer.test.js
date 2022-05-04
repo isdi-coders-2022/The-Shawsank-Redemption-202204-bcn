@@ -67,7 +67,7 @@ describe("Given a countriesReducer function", () => {
   });
 
   describe("When it's invoked with a initial state of 25 and a increaseNumber function", () => {
-    test("Then it should return a object with a state of 0", () => {
+    test("Then it should return a object with a state of 25", () => {
       const expectedResult = {
         page: 25,
       };

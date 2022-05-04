@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+import orderCountriesAlphabetically from "../../utils/orderCountriesAlphabetically";
 import { loadCountries } from "../actions/ActionCreator";
 import countriesReducer from "../reducers/countriesReducer";
 import Context from "./CountriesContext";
@@ -17,7 +18,8 @@ const CountriesProvider = ({ children }) => {
       const fetchCountriesData = await fetch(
         "https://restcountries.com/v3.1/all"
       );
-      const finalCountriesData = await fetchCountriesData.json();
+      let finalCountriesData = await fetchCountriesData.json();
+      finalCountriesData = orderCountriesAlphabetically(finalCountriesData);
       countriesDispatch(loadCountries(finalCountriesData));
     })();
   }, []);
