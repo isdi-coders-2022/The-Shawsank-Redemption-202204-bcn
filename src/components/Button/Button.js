@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PropTypes } from "prop-types";
 
 const ButtonContainer = styled.div`
   display: inline-block;
@@ -23,11 +22,6 @@ const Button = ({ text, action }) => {
       </ButtonContainer>
     </>
   );
-};
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  action: PropTypes.any.isRequired,
 };
 
 export default Button;
