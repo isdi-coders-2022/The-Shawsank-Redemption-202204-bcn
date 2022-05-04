@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
 const CountryContainer = styled.div`
   color: #8399a2;
@@ -52,6 +53,10 @@ const Country = ({ country }) => {
       </div>
     </CountryContainer>
   );
+};
+
+Country.propTypes = {
+  country: PropTypes.any.isRequired,
 };
 
 export default Country;
