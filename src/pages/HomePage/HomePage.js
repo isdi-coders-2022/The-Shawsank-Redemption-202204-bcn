@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import Country from "../../components/Country/Country";
 import FilterContinent from "../../components/FilterContinent/FilterContinent";
