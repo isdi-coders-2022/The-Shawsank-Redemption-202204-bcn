@@ -18,6 +18,13 @@ const countriesReducer = (state, action) => {
       newData = { ...state, countries: action.payload, loaded: true };
       break;
 
+    case actionTypes.addCountry:
+      newData = {
+        ...state,
+        favouriteCountries: [...state.favouriteCountries, action.payload],
+      };
+
+      break;
     default:
       newData = { ...state };
   }
