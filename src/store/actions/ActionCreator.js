@@ -7,3 +7,8 @@ export const increaseNumber = () => ({
 export const decreaseNumber = () => ({
   type: actionTypes.decreaseNumber,
 });
+
+export const loadCountries = (countries) => ({
+  type: actionTypes.loadCountries,
+  payload: countries,
+});

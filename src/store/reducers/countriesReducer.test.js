@@ -1,7 +1,7 @@
 import { increaseNumber, decreaseNumber } from "../actions/ActionCreator";
-import actualPageReducer from "./actualPageReducer";
+import countriesReducer from "./countriesReducer";
 
-describe("Given a actualPageReducer function", () => {
+describe("Given a countriesReducer function", () => {
   describe("When it's invoked with a initial state of 5 and a increaseNumber action", () => {
     test("Then it should return a object with a state of 6", () => {
       const expectedResult = {
@@ -12,7 +12,7 @@ describe("Given a actualPageReducer function", () => {
         page: 5,
       };
 
-      const receivedResult = actualPageReducer(dummyObject, increaseNumber());
+      const receivedResult = countriesReducer(dummyObject, increaseNumber());
 
       expect(receivedResult.page).toBe(expectedResult.page);
     });
@@ -28,7 +28,7 @@ describe("Given a actualPageReducer function", () => {
         page: 5,
       };
 
-      const receivedResult = actualPageReducer(dummyObject, decreaseNumber());
+      const receivedResult = countriesReducer(dummyObject, decreaseNumber());
 
       expect(receivedResult.page).toBe(expectedResult.page);
     });
@@ -44,7 +44,7 @@ describe("Given a actualPageReducer function", () => {
         page: 5,
       };
 
-      const receivedResult = actualPageReducer(dummyObject, increaseNumber);
+      const receivedResult = countriesReducer(dummyObject, increaseNumber);
 
       expect(receivedResult.page).toBe(expectedResult.page);
     });
@@ -60,7 +60,7 @@ describe("Given a actualPageReducer function", () => {
         page: 0,
       };
 
-      const receivedResult = actualPageReducer(dummyObject, decreaseNumber());
+      const receivedResult = countriesReducer(dummyObject, decreaseNumber());
 
       expect(receivedResult.page).toBe(expectedResult.page);
     });
@@ -76,7 +76,7 @@ describe("Given a actualPageReducer function", () => {
         page: 25,
       };
 
-      const receivedResult = actualPageReducer(dummyObject, increaseNumber());
+      const receivedResult = countriesReducer(dummyObject, increaseNumber());
 
       expect(receivedResult.page).toBe(expectedResult.page);
     });
