@@ -5,16 +5,20 @@ const actualPageReducer = (state, action) => {
 
   switch (action.type) {
     case actionTypes.increaseNumber:
-      newPage = { ...state, page: state.page + 1 };
-      return newPage;
+      state.page === 25
+        ? (newPage = { ...state })
+        : (newPage = { ...state, page: state.page + 1 });
+      break;
     case actionTypes.decreaseNumber:
-      newPage = { ...state, page: state.page - 1 };
-      return newPage;
+      state.page === 0
+        ? (newPage = { ...state })
+        : (newPage = { ...state, page: state.page - 1 });
+      break;
 
     default:
       newPage = { ...state };
-      return newPage;
   }
+  return newPage;
 };
 
 export default actualPageReducer;

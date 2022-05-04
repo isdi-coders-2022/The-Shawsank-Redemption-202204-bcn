@@ -1,5 +1,11 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import {
+  decreaseNumber,
+  increaseNumber,
+} from "../../store/actions/ActionCreator";
 import Button from "../Button/Button";
+import Context from "../../store/contexts/CountriesContext";
 
 const FooterContainer = styled.div`
   background-color: #8399a2;
@@ -20,11 +26,13 @@ const FooterContainer = styled.div`
 `;
 
 const Footer = () => {
+  const { state, countriesDispatch } = useContext(Context);
+  debugger;
   return (
     <FooterContainer>
-      <Button text={"<"} />
-      <p>page</p>
-      <Button text={">"} />
+      <Button text={"<"} action={() => countriesDispatch(decreaseNumber())} />
+      <p>{state.page}/25</p>
+      <Button text={">"} action={() => countriesDispatch(increaseNumber())} />
     </FooterContainer>
   );
 };
