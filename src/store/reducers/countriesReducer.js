@@ -1,4 +1,4 @@
-import actionTypes, {
+import {
   addCountryType,
   decreaseNumberType,
   increaseNumberType,

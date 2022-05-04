@@ -4,7 +4,7 @@ import {
   loadCountries,
   addCountry,
 } from "./ActionCreator";
-import actionTypes, {
+import {
   addCountryType,
   decreaseNumberType,
   increaseNumberType,
