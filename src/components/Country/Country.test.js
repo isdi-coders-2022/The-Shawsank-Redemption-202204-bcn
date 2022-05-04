@@ -5,13 +5,17 @@ import Country from "./Country";
 describe("Given a Country Component", () => {
   describe("When it's called with a dummyCountry prop", () => {
     const dummyCountry = {
-      name: "headingText",
-      nativeName: "headingText",
-      region: "regionText",
+      flags: {
+        svg: "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/b1/Bandera_de_Wakanda.png/revision/latest?cb=20190823173054&path-prefix=es",
+      },
+      name: { common: "Maripuri", official: "Maripuri" },
+      region: "Africa",
+      capital: "Wakanda",
+      population: "500",
     };
-    test("Then it should render the text 'headingText' 2 times", () => {
+    test("Then it should render the text 'Maripuri' 2 times", () => {
       const expectedResult = 2;
-      const testText = "headingText";
+      const testText = "Maripuri";
 
       render(
         <BrowserRouter>
@@ -21,19 +25,6 @@ describe("Given a Country Component", () => {
 
       const receivedResult = screen.getAllByText(testText).length;
       expect(receivedResult).toBe(expectedResult);
-    });
-
-    test("Then it should render the text 'Region: regionText'", () => {
-      const testText = "Region: regionText";
-
-      render(
-        <BrowserRouter>
-          <Country country={dummyCountry} />
-        </BrowserRouter>
-      );
-
-      const receivedResult = screen.getByText(testText);
-      expect(receivedResult).toBeInTheDocument();
     });
   });
 });

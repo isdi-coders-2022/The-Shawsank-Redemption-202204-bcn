@@ -16,6 +16,7 @@ const CountryContainer = styled.div`
   }
   img {
     width: 100%;
+    height: 210px;
     border-radius: 20px 20px 0px 0px;
   }
   h3 {
@@ -40,13 +41,12 @@ const CountryContainer = styled.div`
 const Country = ({ country }) => {
   return (
     <CountryContainer>
-      <img src={country.img} alt="" />
-      <h3>{country.name}</h3>
-      <h4>{country.nativeName}</h4>
+      <img src={country.flags.svg} alt="" />
+      <h3>{country.name.common}</h3>
+      <h4>{country.name.official}</h4>
       <p>Region: {country.region}</p>
       <p>Capital: {country.capital}</p>
       <p>Population: {country.population}</p>
-      <p>Language: {country.language}</p>
       <div className="country-buttons">
         <Button text={"+ Info"} />
       </div>

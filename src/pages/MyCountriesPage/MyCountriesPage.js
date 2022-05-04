@@ -13,13 +13,13 @@ const MyCountriesPageContainer = styled.div`
 
 const MyCountriesPage = () => {
   const dummyCountry = {
-    img: "/images/canada.jpg",
-    name: "Canada",
-    nativeName: "Canada",
-    region: "America",
-    capital: "Ottawa",
-    population: "38.586.325",
-    language: "french",
+    flags: {
+      svg: "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/b1/Bandera_de_Wakanda.png/revision/latest?cb=20190823173054&path-prefix=es",
+    },
+    name: { common: "Maripuri", official: "Maripuri" },
+    region: "Africa",
+    capital: "Wakanda",
+    population: "500",
   };
   return (
     <MyCountriesPageContainer>
