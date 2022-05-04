@@ -12,3 +12,8 @@ export const loadCountries = (countries) => ({
   type: actionTypes.loadCountries,
   payload: countries,
 });
+
+export const addCountry = (country) => ({
+  type: actionTypes.addCountry,
+  payload: country,
+});
