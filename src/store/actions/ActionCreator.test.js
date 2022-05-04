@@ -1,4 +1,4 @@
-import { increaseNumber, decreaseNumber } from "../ActionCreator";
+import { increaseNumber, decreaseNumber } from "./ActionCreator";
 import actionTypes from "./ActionTypes";
 
 describe("Given a increaseNumber function", () => {

@@ -1,4 +1,4 @@
-import actionTypes from "./actions/ActionTypes";
+import actionTypes from "./ActionTypes";
 
 export const increaseNumber = () => ({
   type: actionTypes.increaseNumber,
