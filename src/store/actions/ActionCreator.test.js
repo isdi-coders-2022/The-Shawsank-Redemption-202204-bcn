@@ -1,4 +1,9 @@
-import { increaseNumber, decreaseNumber, loadCountries } from "./ActionCreator";
+import {
+  increaseNumber,
+  decreaseNumber,
+  loadCountries,
+  addCountry,
+} from "./ActionCreator";
 import actionTypes from "./ActionTypes";
 
 describe("Given a increaseNumber function", () => {
@@ -39,6 +44,22 @@ describe("Given a loadCountries function", () => {
       };
 
       const receivedResult = loadCountries(countries);
+
+      expect(receivedResult).toEqual(expectedResult);
+    });
+  });
+});
+
+describe("Given a addCountry function", () => {
+  describe("When it's invoked", () => {
+    test("Then it should return a certain object", () => {
+      let country;
+      const expectedResult = {
+        type: actionTypes.addCountry,
+        payload: country,
+      };
+
+      const receivedResult = addCountry(country);
 
       expect(receivedResult).toEqual(expectedResult);
     });

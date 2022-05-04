@@ -3,27 +3,34 @@ import PropTypes from "prop-types";
 
 const IconButtonContainer = styled.div`
   display: inline-block;
+  position: absolute;
+
   button {
     border: none;
     background: none;
     cursor: pointer;
+    width: 65px;
+    height: 65px;
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
   }
 `;
 
-const IconButton = ({ src, alt, action }) => {
+const IconButton = ({ src, action }) => {
   return (
     <IconButtonContainer>
       <button onClick={action}>
-        <img src={src} alt={alt} />
+        <img src={src} alt="icon" />
       </button>
     </IconButtonContainer>
   );
 };
 
 IconButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  action: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 export default IconButton;
