@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
 import PropTypes from "prop-types";
+import IconButton from "../IconButton/IconButton";
 
 const CountryContainer = styled.div`
   color: #8399a2;
@@ -42,6 +43,7 @@ const CountryContainer = styled.div`
 const Country = ({ country }) => {
   return (
     <CountryContainer>
+      <IconButton src={"images/add.png"} />
       <img src={country.flags.svg} alt="" />
       <h3>{country.name.common}</h3>
       <h4>{country.name.official}</h4>
