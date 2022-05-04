@@ -49,4 +49,36 @@ describe("Given a actualPageReducer function", () => {
       expect(receivedResult.page).toBe(expectedResult.page);
     });
   });
+
+  describe("When it's invoked with a initial state of 0 and a decreaseNumber function", () => {
+    test("Then it should return a object with a state of 0", () => {
+      const expectedResult = {
+        page: 0,
+      };
+
+      const dummyObject = {
+        page: 0,
+      };
+
+      const receivedResult = actualPageReducer(dummyObject, decreaseNumber());
+
+      expect(receivedResult.page).toBe(expectedResult.page);
+    });
+  });
+
+  describe("When it's invoked with a initial state of 25 and a increaseNumber function", () => {
+    test("Then it should return a object with a state of 0", () => {
+      const expectedResult = {
+        page: 25,
+      };
+
+      const dummyObject = {
+        page: 25,
+      };
+
+      const receivedResult = actualPageReducer(dummyObject, increaseNumber());
+
+      expect(receivedResult.page).toBe(expectedResult.page);
+    });
+  });
 });
