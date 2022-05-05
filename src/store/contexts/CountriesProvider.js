@@ -19,8 +19,9 @@ const CountriesProvider = ({ children }) => {
       const fetchCountriesData = await fetch(
         "https://restcountries.com/v3.1/all"
       );
-      let finalCountriesData = await fetchCountriesData.json();
-      finalCountriesData = orderCountriesAlphabetically(finalCountriesData);
+      let countriesData = await fetchCountriesData.json();
+      countriesData = orderCountriesAlphabetically(countriesData);
+      const finalCountriesData = countriesData.slice(0, 30);
       countriesDispatch(loadCountries(finalCountriesData));
     })();
   }, []);
