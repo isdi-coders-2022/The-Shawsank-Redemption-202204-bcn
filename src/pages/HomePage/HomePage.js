@@ -2,7 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 import Country from "../../components/Country/Country";
 import FilterContinent from "../../components/FilterContinent/FilterContinent";
-import Context from "../../store/contexts/CountriesContext";
+import Context from "../../store/contexts/Context";
 
 const HomePageContainer = styled.div`
   background-color: #eef2f3;
