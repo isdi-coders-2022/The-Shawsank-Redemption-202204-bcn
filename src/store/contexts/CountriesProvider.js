@@ -8,7 +8,7 @@ const CountriesProvider = ({ children }) => {
   const initialData = {
     page: 0,
     countries: [],
-    favouriteCountries: [],
+    myCountries: [],
     loaded: false,
   };
 

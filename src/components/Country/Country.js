@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 import PropTypes from "prop-types";
 import IconButton from "../IconButton/IconButton";
+import useAPI from "../../hooks/useAPI";
 
 const CountryContainer = styled.div`
   color: #8399a2;
@@ -39,11 +40,11 @@ const CountryContainer = styled.div`
     margin-top: 20px;
   }
 `;
-
 const Country = ({ country }) => {
+  const { addCountry } = useAPI();
   return (
     <CountryContainer>
-      <IconButton src={"images/add.png"} />
+      <IconButton src={"images/add.png"} action={() => addCountry(country)} />
       <img src={country.flags.svg} alt="" />
       <h3>{country.name.common}</h3>
       <h4>{country.name.official}</h4>
