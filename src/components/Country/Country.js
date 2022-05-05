@@ -11,7 +11,9 @@ const CountryContainer = styled.div`
   height: 560px;
   margin: 10px;
   background-color: #cad4d8;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 20px;
   box-shadow: 1px 5px 15px 3px rgba(0, 0, 0, 0.51);
   transition: 0.5s;
@@ -25,7 +27,8 @@ const CountryContainer = styled.div`
   }
   h3 {
     margin: 0px 5px;
-    font-size: 48px;
+    font-size: 40px;
+    font-weight: bold;
   }
   h4 {
     margin: 0px 6px;
@@ -38,33 +41,35 @@ const CountryContainer = styled.div`
   .country-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 5px;
   }
 `;
 const Country = ({ country, printedInHomePage }) => {
   const { addCountry, deleteCountry } = useAPI();
   return (
     <CountryContainer>
-      {printedInHomePage && (
-        <NavLink to="/countries">
+      <div className="country-info">
+        {printedInHomePage && (
+          <NavLink to="/countries">
+            <IconButton
+              src={"images/add.png"}
+              action={() => addCountry(country)}
+            />
+          </NavLink>
+        )}
+        {!printedInHomePage && (
           <IconButton
-            src={"images/add.png"}
-            action={() => addCountry(country)}
+            src={"images/delete.png"}
+            action={() => deleteCountry(country.id)}
           />
-        </NavLink>
-      )}
-      {!printedInHomePage && (
-        <IconButton
-          src={"images/delete.png"}
-          action={() => deleteCountry(country.id)}
-        />
-      )}
-      <img src={country.flags.svg} alt="" />
-      <h3>{country.name.common}</h3>
-      <h4>{country.name.official}</h4>
-      <p>Region: {country.region}</p>
-      <p>Capital: {country.capital}</p>
-      <p>Population: {country.population}</p>
+        )}
+        <img src={country.flags.svg} alt="" />
+        <h3>{country.name.common}</h3>
+        <h4>{country.name.official}</h4>
+        <p>Region: {country.region}</p>
+        <p>Capital: {country.capital}</p>
+        <p>Population: {country.population}</p>
+      </div>
       <div className="country-buttons">
         <NavLink to={`/info/${country.name.common}`}>
           <Button text={"+ Info"} />
