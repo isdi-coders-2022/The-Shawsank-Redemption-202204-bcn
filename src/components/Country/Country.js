@@ -41,7 +41,7 @@ const CountryContainer = styled.div`
   }
 `;
 const Country = ({ country }) => {
-  const { addCountry } = useAPI();
+  const { addCountry, deleteCountry } = useAPI();
   return (
     <CountryContainer>
       <IconButton src={"images/add.png"} action={() => addCountry(country)} />
@@ -54,6 +54,10 @@ const Country = ({ country }) => {
       <div className="country-buttons">
         <Button text={"+ Info"} />
       </div>
+      <IconButton
+        src={"images/delete.png"}
+        action={() => deleteCountry(country.id)}
+      />
     </CountryContainer>
   );
 };
