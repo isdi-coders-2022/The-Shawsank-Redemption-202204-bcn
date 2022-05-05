@@ -10,14 +10,18 @@ const countriesReducer = (state, action) => {
 
   switch (action.type) {
     case increaseNumberType:
-      state.page === 25
-        ? (newData = { ...state })
-        : (newData = { ...state, page: state.page + 1 });
+      if (state.page === 25) {
+        newData = { ...state };
+        break;
+      }
+      newData = { ...state, page: state.page + 1 };
       break;
     case decreaseNumberType:
-      state.page === 0
-        ? (newData = { ...state })
-        : (newData = { ...state, page: state.page - 1 });
+      if (state.page === 0) {
+        newData = { ...state };
+        break;
+      }
+      newData = { ...state, page: state.page - 1 };
       break;
     case loadCountriesType:
       newData = { ...state, countries: action.payload, loaded: true };
