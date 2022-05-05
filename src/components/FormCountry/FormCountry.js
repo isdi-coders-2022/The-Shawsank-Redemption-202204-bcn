@@ -13,7 +13,7 @@ const FormContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #c4c4c4;
-    height: 450px;
+    height: 500px;
   }
   .form-container--hidden {
     z-index: -10;
@@ -33,6 +33,17 @@ const FormContainer = styled.div`
   }
   input {
     width: 300px;
+  }
+
+  div.form-container button {
+    background-color: #8399a2;
+    color: #eef2f3;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    padding: 3px 10px;
+    margin-top: 20px;
+    cursor: pointer;
   }
 `;
 
@@ -72,6 +83,7 @@ const FormCountry = () => {
         <input type="text" id="borders" />
         <label htmlFor="timezone">Time-Zone:</label>
         <input type="text" id="timezone" />
+        <Button text={"CREATE"} />
       </div>
     </FormContainer>
   );
