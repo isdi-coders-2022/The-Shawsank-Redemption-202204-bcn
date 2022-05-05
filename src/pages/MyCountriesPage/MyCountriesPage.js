@@ -31,7 +31,7 @@ const MyCountriesPage = () => {
       <MyCountriesPageContainer>
         <div className="country-cards">
           {state.myCountries.map((country, index) => (
-            <Country key={index} country={country} />
+            <Country key={index} country={country} printedInHomePage={false} />
           ))}
         </div>
       </MyCountriesPageContainer>
