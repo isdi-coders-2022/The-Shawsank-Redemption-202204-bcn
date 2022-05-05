@@ -5,7 +5,7 @@ import {
   increaseNumber,
 } from "../../store/actions/ActionCreator";
 import Button from "../Button/Button";
-import Context from "../../store/contexts/CountriesContext";
+import Context from "../../store/contexts/Context";
 
 const FooterContainer = styled.div`
   background-color: #8399a2;

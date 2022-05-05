@@ -2,7 +2,7 @@ import { useEffect, useReducer } from "react";
 import orderCountriesAlphabetically from "../../utils/orderCountriesAlphabetically";
 import { loadCountries } from "../actions/ActionCreator";
 import countriesReducer from "../reducers/countriesReducer";
-import Context from "./CountriesContext";
+import Context from "./Context";
 
 const CountriesProvider = ({ children }) => {
   const initialData = {

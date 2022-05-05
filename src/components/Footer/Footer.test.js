@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Context from "../../store/contexts/CountriesContext";
+import Context from "../../store/contexts/Context";
 import CountriesProvider from "../../store/contexts/CountriesProvider";
 import Footer from "./Footer";
 

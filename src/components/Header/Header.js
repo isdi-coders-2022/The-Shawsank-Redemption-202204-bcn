@@ -26,6 +26,11 @@ const HeaderContainer = styled.div`
       color: white;
       text-decoration: none;
       font-size: 1.3em;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #dedc8a;
     }
   }
 `;
