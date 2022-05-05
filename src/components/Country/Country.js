@@ -66,7 +66,9 @@ const Country = ({ country, printedInHomePage }) => {
       <p>Capital: {country.capital}</p>
       <p>Population: {country.population}</p>
       <div className="country-buttons">
-        <Button text={"+ Info"} />
+        <NavLink to={`/info/${country.name.common}`}>
+          <Button text={"+ Info"} />
+        </NavLink>
       </div>
     </CountryContainer>
   );

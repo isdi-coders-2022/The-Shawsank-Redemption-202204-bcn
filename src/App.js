@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import { useContext } from "react";
 import Context from "./store/contexts/Context";
+import InfoPage from "./pages/InfoPage/InfoPage";
 
 function App() {
   const { state } = useContext(Context);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/countries" element={<MyCountriesPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/info/:id" element={<InfoPage />} />
           </Routes>
           <Footer />
         </>
