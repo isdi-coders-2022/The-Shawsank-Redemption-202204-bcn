@@ -29,5 +29,20 @@ describe("Given a Country Component", () => {
       const receivedResult = screen.getAllByText(testText).length;
       expect(receivedResult).toBe(expectedResult);
     });
+
+    test("Then it should two button elements", () => {
+      const expectedResult = 2;
+
+      render(
+        <CountriesProvider>
+          <BrowserRouter>
+            <Country country={dummyCountry} />
+          </BrowserRouter>
+        </CountriesProvider>
+      );
+
+      const receivedResult = screen.getAllByRole("button");
+      expect(receivedResult.length).toEqual(expectedResult);
+    });
   });
 });
