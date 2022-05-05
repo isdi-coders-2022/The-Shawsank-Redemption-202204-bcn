@@ -23,7 +23,6 @@ const HomePage = () => {
   return (
     <HomePageContainer>
       <FilterContinent />
-
       <div className="country-cards">
         {state.countries.map((country, index) => (
           <Country key={index} country={country} />
