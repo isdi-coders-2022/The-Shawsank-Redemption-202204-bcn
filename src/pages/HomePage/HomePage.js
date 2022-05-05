@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Country from "../../components/Country/Country";
 import FilterContinent from "../../components/FilterContinent/FilterContinent";
 import Context from "../../store/contexts/Context";
+import Footer from "../../components/Footer/Footer";
 
 const HomePageContainer = styled.div`
   background-color: #eef2f3;
@@ -21,14 +22,17 @@ const HomePage = () => {
   const { state } = useContext(Context);
 
   return (
-    <HomePageContainer>
-      <FilterContinent />
-      <div className="country-cards">
-        {state.countries.map((country, index) => (
-          <Country key={index} country={country} printedInHomePage={true} />
-        ))}
-      </div>
-    </HomePageContainer>
+    <>
+      <HomePageContainer>
+        <FilterContinent />
+        <div className="country-cards">
+          {state.countries.map((country, index) => (
+            <Country key={index} country={country} printedInHomePage={true} />
+          ))}
+        </div>
+      </HomePageContainer>
+      <Footer />
+    </>
   );
 };
 
