@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Country from "../../components/Country/Country";
+import FormCountry from "../../components/FormCountry/FormCountry";
 
 const MyCountriesPageContainer = styled.div`
   background-color: #eef2f3;
@@ -22,9 +23,12 @@ const MyCountriesPage = () => {
     population: "500",
   };
   return (
-    <MyCountriesPageContainer>
-      <Country country={dummyCountry} />
-    </MyCountriesPageContainer>
+    <>
+      <FormCountry />
+      <MyCountriesPageContainer>
+        <Country country={dummyCountry} />
+      </MyCountriesPageContainer>
+    </>
   );
 };
 
