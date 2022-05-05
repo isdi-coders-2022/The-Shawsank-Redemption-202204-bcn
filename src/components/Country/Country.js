@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import PropTypes from "prop-types";
 import IconButton from "../IconButton/IconButton";
 import useAPI from "../../hooks/useAPI";
+import { NavLink } from "react-router-dom";
 
 const CountryContainer = styled.div`
   color: #8399a2;
@@ -45,7 +46,12 @@ const Country = ({ country, printedInHomePage }) => {
   return (
     <CountryContainer>
       {printedInHomePage && (
-        <IconButton src={"images/add.png"} action={() => addCountry(country)} />
+        <NavLink to="/countries">
+          <IconButton
+            src={"images/add.png"}
+            action={() => addCountry(country)}
+          />
+        </NavLink>
       )}
       {!printedInHomePage && (
         <IconButton

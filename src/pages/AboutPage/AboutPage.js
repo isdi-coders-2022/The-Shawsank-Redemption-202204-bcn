@@ -9,6 +9,7 @@ const AboutPageContainer = styled.div`
   align-items: center;
   text-align: justify;
   padding: 20px 50px;
+  min-height: 80vh;
 `;
 
 const AboutPage = () => {

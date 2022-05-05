@@ -31,12 +31,12 @@ describe("Given a Country Component", () => {
     });
 
     test("Then it should two button elements", () => {
-      const expectedResult = 3;
+      const expectedResult = 2;
 
       render(
         <CountriesProvider>
           <BrowserRouter>
-            <Country country={dummyCountry} />
+            <Country country={dummyCountry} printedInHomePage={false} />
           </BrowserRouter>
         </CountriesProvider>
       );
