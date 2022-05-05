@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Country from "../../components/Country/Country";
 import FormCountry from "../../components/FormCountry/FormCountry";
 import useAPI from "../../hooks/useAPI";
-import Context from "../../store/contexts/CountriesContext";
+import Context from "../../store/contexts/Context";
 
 const MyCountriesPageContainer = styled.div`
   background-color: #eef2f3;

@@ -7,7 +7,7 @@ import MyCountriesPage from "./pages/MyCountriesPage/MyCountriesPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import { useContext } from "react";
-import Context from "./store/contexts/CountriesContext";
+import Context from "./store/contexts/Context";
 
 function App() {
   const { state } = useContext(Context);

@@ -1,6 +1,6 @@
 import orderCountriesAlphabetically from "../utils/orderCountriesAlphabetically";
 import { useContext } from "react";
-import Context from "../store/contexts/CountriesContext";
+import Context from "../store/contexts/Context";
 import { loadMyCountries } from "../store/actions/ActionCreator";
 
 const useAPI = () => {

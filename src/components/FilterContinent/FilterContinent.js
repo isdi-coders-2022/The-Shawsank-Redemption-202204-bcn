@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../Button/Button";
-import FilterContinentContainer from "./FilterContinentStyle";
+import FilterContinentContainer from "./FilterContinentContainer";
 
 const FilterContinent = () => {
   const [continentBarStatus, setContinentBarStatus] = useState(false);
