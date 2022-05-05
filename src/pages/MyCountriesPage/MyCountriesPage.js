@@ -13,12 +13,17 @@ const MyCountriesPageContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
-
+  min-height: 80vh;
   .country-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
+  }
+
+  .no-Countries {
+    font-size: 50px;
+    color: #8399a2;
   }
 `;
 const MyCountriesPage = () => {
@@ -29,11 +34,19 @@ const MyCountriesPage = () => {
     <>
       <FormCountry />
       <MyCountriesPageContainer>
-        <div className="country-cards">
-          {state.myCountries.map((country, index) => (
-            <Country key={index} country={country} printedInHomePage={false} />
-          ))}
-        </div>
+        {state.myCountries.length !== 0 ? (
+          <div className="country-cards">
+            {state.myCountries.map((country, index) => (
+              <Country
+                key={index}
+                country={country}
+                printedInHomePage={false}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="no-Countries">You have no countries :(</p>
+        )}
       </MyCountriesPageContainer>
     </>
   );
