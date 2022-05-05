@@ -40,11 +40,19 @@ const CountryContainer = styled.div`
     margin-top: 20px;
   }
 `;
-const Country = ({ country }) => {
+const Country = ({ country, printedInHomePage }) => {
   const { addCountry, deleteCountry } = useAPI();
   return (
     <CountryContainer>
-      <IconButton src={"images/add.png"} action={() => addCountry(country)} />
+      {printedInHomePage && (
+        <IconButton src={"images/add.png"} action={() => addCountry(country)} />
+      )}
+      {!printedInHomePage && (
+        <IconButton
+          src={"images/delete.png"}
+          action={() => deleteCountry(country.id)}
+        />
+      )}
       <img src={country.flags.svg} alt="" />
       <h3>{country.name.common}</h3>
       <h4>{country.name.official}</h4>
@@ -54,10 +62,6 @@ const Country = ({ country }) => {
       <div className="country-buttons">
         <Button text={"+ Info"} />
       </div>
-      <IconButton
-        src={"images/delete.png"}
-        action={() => deleteCountry(country.id)}
-      />
     </CountryContainer>
   );
 };
