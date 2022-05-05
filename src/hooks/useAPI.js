@@ -24,6 +24,15 @@ const useAPI = () => {
       body: JSON.stringify(country),
     });
   };
-  return { loadCountries, addCountry };
+
+  const deleteCountry = async (id) => {
+    await fetch(`https://mycountries-api.onrender.com/countries/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+  return { loadCountries, addCountry, deleteCountry };
 };
 export default useAPI;
