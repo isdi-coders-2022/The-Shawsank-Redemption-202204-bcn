@@ -31,7 +31,7 @@ describe("Given a Country Component", () => {
     });
 
     test("Then it should two button elements", () => {
-      const expectedResult = 2;
+      const expectedResult = 3;
 
       render(
         <CountriesProvider>
