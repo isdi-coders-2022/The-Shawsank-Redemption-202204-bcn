@@ -13,6 +13,13 @@ const MyCountriesPageContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+
+  .country-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 `;
 const MyCountriesPage = () => {
   const { state } = useContext(Context);

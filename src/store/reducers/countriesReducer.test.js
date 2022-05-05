@@ -1,4 +1,9 @@
-import { increaseNumber, decreaseNumber } from "../actions/ActionCreator";
+import {
+  increaseNumber,
+  decreaseNumber,
+  loadMyCountries,
+  loadCountries,
+} from "../actions/ActionCreator";
 import countriesReducer from "./countriesReducer";
 
 describe("Given a countriesReducer function", () => {
@@ -79,6 +84,38 @@ describe("Given a countriesReducer function", () => {
       const receivedResult = countriesReducer(dummyObject, increaseNumber());
 
       expect(receivedResult.page).toBe(expectedResult.page);
+    });
+  });
+
+  describe("When it's invoked with a initial state of 'loaded: false' and a loadMyCountries function", () => {
+    test("Then it should return a object a state of 'loaded: true'", () => {
+      const expectedResult = {
+        loaded: true,
+      };
+
+      const dummyObject = {
+        loaded: false,
+      };
+
+      const receivedResult = countriesReducer(dummyObject, loadMyCountries());
+
+      expect(receivedResult).toEqual(expectedResult);
+    });
+  });
+
+  describe("When it's invoked with a initial state of 'loaded: false' and a loadCountries function", () => {
+    test("Then it should return a object a state of 'loaded: true'", () => {
+      const expectedResult = {
+        loaded: true,
+      };
+
+      const dummyObject = {
+        loaded: false,
+      };
+
+      const receivedResult = countriesReducer(dummyObject, loadCountries());
+
+      expect(receivedResult).toEqual(expectedResult);
     });
   });
 });

@@ -24,7 +24,7 @@ const countriesReducer = (state, action) => {
       break;
 
     case loadMyCountriesType:
-      newData = { ...state, myCountries: action.payload };
+      newData = { ...state, myCountries: action.payload, loaded: true };
 
       break;
     default:
