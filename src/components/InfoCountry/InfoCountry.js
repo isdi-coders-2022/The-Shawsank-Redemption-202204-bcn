@@ -71,17 +71,19 @@ const InfoCountryContainer = styled.div`
 const InfoCountry = ({ country }) => {
   return (
     <InfoCountryContainer>
-      <img src={country.img} alt="" />
+      <img src={country.flags.svg} alt="" />
       <div className="info">
-        <h3>{country.name}</h3>
-        <h4>{country.nativeName}</h4>
+        <h3>{country.name.common}</h3>
+        <h4>{country.name.official}</h4>
         <p>Region: {country.region}</p>
         <p>Capital: {country.capital}</p>
         <p>Population: {country.population}</p>
-        <p>Language: {country.language}</p>
-        <p>Currency: {country.currency}</p>
-        <p>Borders: {country.borders}</p>
-        <p>Time Zone: {country.timezone}</p>
+        <p>Area: {country.area}</p>
+        <p>
+          Independent: {country.independent && " Yes"}
+          {!country.independent && " No"}
+        </p>
+        <p>Time Zone: {country.timezones[0]}</p>
       </div>
     </InfoCountryContainer>
   );
