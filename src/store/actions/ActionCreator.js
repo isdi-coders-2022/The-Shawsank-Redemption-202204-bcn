@@ -3,6 +3,7 @@ import {
   decreaseNumberType,
   loadCountriesType,
   addCountryType,
+  loadMyCountriesType,
 } from "./ActionTypes";
 
 export const increaseNumber = () => ({
@@ -20,5 +21,10 @@ export const loadCountries = (countries) => ({
 
 export const addCountry = (country) => ({
   type: addCountryType,
+  payload: country,
+});
+
+export const loadMyCountries = (country) => ({
+  type: loadMyCountriesType,
   payload: country,
 });

@@ -1,8 +1,8 @@
 import {
-  addCountryType,
   decreaseNumberType,
   increaseNumberType,
   loadCountriesType,
+  loadMyCountriesType,
 } from "../actions/ActionTypes";
 
 const countriesReducer = (state, action) => {
@@ -23,11 +23,8 @@ const countriesReducer = (state, action) => {
       newData = { ...state, countries: action.payload, loaded: true };
       break;
 
-    case addCountryType:
-      newData = {
-        ...state,
-        favouriteCountries: [...state.favouriteCountries, action.payload],
-      };
+    case loadMyCountriesType:
+      newData = { ...state, myCountries: action.payload };
 
       break;
     default:

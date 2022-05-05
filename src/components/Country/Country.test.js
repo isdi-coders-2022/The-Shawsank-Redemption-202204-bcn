@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import CountriesProvider from "../../store/contexts/CountriesProvider";
 import Country from "./Country";
 
 describe("Given a Country Component", () => {
@@ -18,9 +19,11 @@ describe("Given a Country Component", () => {
       const testText = "Maripuri";
 
       render(
-        <BrowserRouter>
-          <Country country={dummyCountry} />
-        </BrowserRouter>
+        <CountriesProvider>
+          <BrowserRouter>
+            <Country country={dummyCountry} />
+          </BrowserRouter>
+        </CountriesProvider>
       );
 
       const receivedResult = screen.getAllByText(testText).length;
