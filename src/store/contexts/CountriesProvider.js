@@ -21,7 +21,7 @@ const CountriesProvider = ({ children }) => {
       );
       let countriesData = await fetchCountriesData.json();
       countriesData = orderCountriesAlphabetically(countriesData);
-      const finalCountriesData = countriesData.slice(0, 30);
+      const finalCountriesData = countriesData.slice(0, 25);
       countriesDispatch(loadCountries(finalCountriesData));
     })();
   }, []);
