@@ -15,7 +15,8 @@ const InfoPageContainer = styled.div`
   }
   .country-cards {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
   }
