@@ -50,10 +50,27 @@ const FormContainer = styled.div`
 const FormCountry = () => {
   const [formCountryStatus, setFormCountryStatus] = useState(false);
 
+  const [formValues, setFormValues] = useState({
+    flags: {
+      svg: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
+    },
+    name: { common: "", official: "" },
+    region: "",
+    capital: [""],
+    population: "",
+    area: "",
+    independent: "",
+    timeZone: [""],
+  });
+
   const deployFormCountry = () => {
     formCountryStatus
       ? setFormCountryStatus(false)
       : setFormCountryStatus(true);
+  };
+
+  const handleNameInputChange = (event) => {
+    setFormValues({ ...formValues });
   };
 
   return (
@@ -66,23 +83,21 @@ const FormCountry = () => {
         }
       >
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" value={formValues.name.common} />
         <label htmlFor="nativeName">Native name:</label>
-        <input type="text" id="nativeName" />
+        <input type="text" id="nativeName" value={formValues.name.official} />
         <label htmlFor="region">Region:</label>
-        <input type="text" id="region" />
+        <input type="text" id="region" value={formValues.region} />
         <label htmlFor="capital">Capital:</label>
-        <input type="text" id="capital" />
+        <input type="text" id="capital" value={formValues.capital} />
         <label htmlFor="population">Population:</label>
-        <input type="text" id="population" />
-        <label htmlFor="lenguage">Lenguage:</label>
-        <input type="text" id="lenguage" />
-        <label htmlFor="currency">Currency:</label>
-        <input type="text" id="currency" />
-        <label htmlFor="borders">Borders:</label>
-        <input type="text" id="borders" />
+        <input type="text" id="population" value={formValues.population} />
+        <label htmlFor="area">Area:</label>
+        <input type="text" id="area" value={formValues.area} />
+        <label htmlFor="independent">Independent:</label>
+        <input type="text" id="independent" value={formValues.independent} />
         <label htmlFor="timezone">Time-Zone:</label>
-        <input type="text" id="timezone" />
+        <input type="text" id="timezone" value={formValues.timeZone} />
         <Button text={"CREATE"} />
       </div>
     </FormContainer>
