@@ -15,7 +15,6 @@ const useAPI = () => {
     countriesDispatch(loadMyCountries(finalMyCountriesData));
   };
 
-
   const addCountry = async (country) => {
     await fetch("https://mycountries-api.onrender.com/countries", {
       method: "POST",

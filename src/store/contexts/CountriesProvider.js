@@ -10,6 +10,18 @@ const CountriesProvider = ({ children }) => {
     countries: [],
     myCountries: [],
     loaded: false,
+    newCountry: {
+      flags: {
+        svg: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
+      },
+      name: { common: "", official: "" },
+      region: "",
+      capital: [""],
+      population: "",
+      area: "",
+      independent: "",
+      timeZone: [""],
+    },
   };
 
   const [state, countriesDispatch] = useReducer(countriesReducer, initialData);
