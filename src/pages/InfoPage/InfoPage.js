@@ -32,7 +32,9 @@ const InfoPage = () => {
     );
     return countryToShow[0];
   };
+
   const detailCountry = getCountryToShow();
+
   return (
     <InfoPageContainer>
       <div className="country-cards">

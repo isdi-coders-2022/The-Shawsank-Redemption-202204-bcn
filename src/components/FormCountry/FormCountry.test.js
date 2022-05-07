@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import FormCountry from "./FormCountry";
+import CountriesProvider from "../../store/contexts/CountriesProvider";
 
 describe("Given a FormCountry Component", () => {
   describe("When it's called and the first button clicked", () => {
@@ -9,9 +10,11 @@ describe("Given a FormCountry Component", () => {
       const expectedResult = "Region:";
 
       render(
-        <BrowserRouter>
-          <FormCountry />
-        </BrowserRouter>
+        <CountriesProvider>
+          <BrowserRouter>
+            <FormCountry />
+          </BrowserRouter>
+        </CountriesProvider>
       );
       userEvent.click(screen.getByRole("button"));
       const receivedResult = screen.getByText(expectedResult);

@@ -30,8 +30,8 @@ describe("Given a Country Component", () => {
       expect(receivedResult).toBe(expectedResult);
     });
 
-    test("Then it should two button elements", () => {
-      const expectedResult = 2;
+    test("Then it should at least one button element", () => {
+      const expectedResult = 1;
 
       render(
         <CountriesProvider>
@@ -42,7 +42,7 @@ describe("Given a Country Component", () => {
       );
 
       const receivedResult = screen.getAllByRole("button");
-      expect(receivedResult.length).toEqual(expectedResult);
+      expect(receivedResult).toHaveLength(expectedResult);
     });
   });
 });
