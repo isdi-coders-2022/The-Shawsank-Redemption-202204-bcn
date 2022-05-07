@@ -183,6 +183,7 @@ const FormCountry = () => {
             id="img"
             value={formValues.flags.svg}
             onChange={handleImageInputChange}
+            aria-label={"name-input"}
           />
 
           <label htmlFor="name">Name:</label>
