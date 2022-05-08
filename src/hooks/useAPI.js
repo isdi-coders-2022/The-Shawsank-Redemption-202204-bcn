@@ -13,8 +13,8 @@ const useAPI = () => {
     let finalMyCountriesData = await fetchMyCountriesData.json();
     finalMyCountriesData = orderCountriesAlphabetically(finalMyCountriesData);
     countriesDispatch(loadMyCountries(finalMyCountriesData));
+    return finalMyCountriesData;
   };
-
 
   const addCountry = async (country) => {
     await fetch("https://mycountries-api.onrender.com/countries", {
